@@ -21,7 +21,7 @@ const createBlog = async (req, res) => {
   const { name } = req.body;
   const blog = await blogService.createBlog(name);
 
-  const blogs = await blogService.getAllBlogs();
+  const blogs = await blogService.getPublishedBlogs();
 
   // Emit the event via Socket.IO
   const io = getIO(); 
@@ -49,7 +49,7 @@ const togglePublishBlog = async (req, res) => {
   // res.sendStatus(200);
 
 
-  res.json(await blogService.getBlogById(id));
+  res.json(await blogService.getBlogById(id, {onlyPublished: false}));
 
   
 };

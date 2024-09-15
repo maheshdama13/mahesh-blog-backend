@@ -21,8 +21,8 @@ This is the backend service for the Live Blog application, built using Node.js, 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/live-blog-backend.git
-cd live-blog-backend
+git clone https://github.com/maheshdama13/mahesh-blog-backend.git
+cd mahesh-blog-backend
 ```
 
 ### 2. Install dependencies
@@ -42,3 +42,10 @@ You can manually create the `mahesh_blog_db` database in MySQL or database menti
 npm run start:prod
 ```
 It will automatically sync the Sequelize models with the database:
+
+## Dependencies
+- Express.js - Web framework for Node.js.
+- Sequelize - ORM for interacting with MySQL.
+- Socket.io - For real-time communication.
+- Multer - Middleware for handling file uploads.
+- Axios - For making external HTTP requests (used for metadata scraping).
